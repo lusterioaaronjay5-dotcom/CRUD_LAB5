@@ -1,3 +1,11 @@
+SetEnv DB_DRIVER mysql
+SetEnv DB_HOST your-aiven-host.aivencloud.com
+SetEnv DB_PORT your-aiven-port
+SetEnv DB_USER avnadmin
+SetEnv DB_PASSWORD your-aiven-password
+SetEnv DB_NAME defaultdb
+SetEnv DB_CHARSET utf8mb4
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
