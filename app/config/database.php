@@ -57,6 +57,13 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 |   Example: $database['another_example'] = array('key' => 'value')
 */
 
+// Load local-only DB credentials for WAMPP testing (gitignored file).
+// On Render, this file won't exist — real env vars from the dashboard are used instead.
+$env_local = __DIR__ . '/env.local.php';
+if (file_exists($env_local)) {
+    require_once $env_local;
+}
+
 $database['main'] = array(
     'driver'	=> getenv('DB_DRIVER') ?: '',
     'hostname'	=> getenv('DB_HOST') ?: '',

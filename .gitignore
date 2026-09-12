@@ -26,4 +26,4 @@ runtime/*
 Thumbs.db
 
 # Local database credentials (contains Aiven password)
-public/.htaccess
+app/config/env.local.php
