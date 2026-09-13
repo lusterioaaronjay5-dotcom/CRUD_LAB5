@@ -88,7 +88,11 @@ $config['date_default_timezone'] = 'Asia/Manila';
 | WARNING: You MUST set this value!
 |
 */
-$config['base_url'] 				= 'http://localhost/CRUD_LAB5/public/';
+if (getenv('RENDER_EXTERNAL_URL')) {
+    $config['base_url'] = rtrim(getenv('RENDER_EXTERNAL_URL'), '/') . '/';
+} else {
+    $config['base_url'] = 'http://localhost/CRUD_LAB5/public/';
+}
 
 /*
 |--------------------------------------------------------------------------
