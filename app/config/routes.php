@@ -22,7 +22,7 @@ get_config([
     ],
 ]);
 
-$router->get('/', 'Welcome::index');
+$router->get('/', 'AuthController::login');
 // Auth routes - public, walang middleware.
 $router->get('/login', 'AuthController::login');
 $router->post('/login', 'AuthController::authenticate');
